@@ -51,7 +51,6 @@ group.add(cube3)
 // mesh.rotation.x = Math.PI *.25;
 // mesh.rotation.y = Math.PI *.25;
 
-
 // Axes helper
 const axesHelper = new THREE.AxesHelper(3);
 scene.add(axesHelper);
