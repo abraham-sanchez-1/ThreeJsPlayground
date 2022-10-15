@@ -31,18 +31,18 @@ const renderer = new THREE.WebGLRenderer({
 })
 renderer.setSize(sizes.width, sizes.height)
 
-let time = Date.now()
+//Clock
+const clock = new THREE.Clock()
 
 //Animations
 const animationLoop = () => {
 
-    //Time
-    const currentTime = Date.now()
-    const deltaTime = currentTime - time
-    time = currentTime
+    // Clock
+    const elapsedTime = clock.getElapsedTime()
+    console.log(elapsedTime)
 
     //Update objects
-    mesh.rotation.x += 0.01
+    mesh.rotation.x = elapsedTime * Math.PI *2
 
     //Render
     renderer.render(scene, camera)
