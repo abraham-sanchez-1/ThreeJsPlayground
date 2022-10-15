@@ -42,7 +42,8 @@ const animationLoop = () => {
     console.log(elapsedTime)
 
     //Update objects
-    mesh.rotation.x = elapsedTime * Math.PI *2
+    mesh.position.x = Math.sin(elapsedTime)
+    mesh.position.y = Math.cos(elapsedTime)
 
     //Render
     renderer.render(scene, camera)
